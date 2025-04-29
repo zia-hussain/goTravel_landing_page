@@ -61,6 +61,57 @@ export type Database = {
         };
         Relationships: [];
       };
+      Leads: {
+        Row: {
+          created_at: number;
+          email_address: string;
+          full_name: string;
+          lead_id: string;
+        };
+        Insert: {
+          created_at: number;
+          email_address: string;
+          full_name: string;
+          lead_id?: string;
+        };
+        Update: {
+          created_at?: number;
+          email_address?: string;
+          full_name?: string;
+          lead_id?: string;
+        };
+        Relationships: [];
+      };
+      Locations: {
+        Row: {
+          id: string;
+          img_alt: string;
+          img_url: string;
+          location: string;
+          price_per_person: number;
+          rating: number;
+          title: string;
+        };
+        Insert: {
+          id?: string;
+          img_alt: string;
+          img_url: string;
+          location: string;
+          price_per_person: number;
+          rating: number;
+          title: string;
+        };
+        Update: {
+          id?: string;
+          img_alt?: string;
+          img_url?: string;
+          location?: string;
+          price_per_person?: number;
+          rating?: number;
+          title?: string;
+        };
+        Relationships: [];
+      };
     };
     Views: {
       [_ in never]: never;

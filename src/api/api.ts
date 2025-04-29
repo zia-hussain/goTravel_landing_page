@@ -41,7 +41,7 @@ export async function getLocations() {
     );
   }
 
-  const locations: Location[] = data.map((location) => {
+  const locations: Location[] = data?.map((location) => {
     return {
       id: location.id,
       img: location.img_url,
