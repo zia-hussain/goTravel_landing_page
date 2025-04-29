@@ -5,7 +5,7 @@ import { Database } from "./Database";
 // CREATE SUPABASE CLIENT
 const supabaseUrl = "https://skbfkqqevbjhftdneadt.supabase.co";
 const supabaseKey = import.meta.env.VITE_SUPABASE_API_KEY;
-const supabase = createClient<Database>(supabaseUrl, supabaseKey);
+const supabase = createClient<Database["public"]>(supabaseUrl, supabaseKey);
 
 console.log("Supabase", supabase);
 
